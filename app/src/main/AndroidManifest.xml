@@ -18,7 +18,6 @@
         </activity>
         <activity android:name=".Main3Activity" />
         <activity android:name=".Main5Activity"></activity>
-        <activity android:name=".DecidePage" />
     </application>
 
 </manifest>

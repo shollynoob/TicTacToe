@@ -274,9 +274,9 @@ public class Main3Activity extends AppCompatActivity {
         }
     }
 
-    void disableAllButton(){
+    void disableAllButton() {
         allButtons = new Button[9];
-        for (int i = 0; i < allButtons.length; i++){
+        for (int i = 0; i < allButtons.length; i++) {
             {
                 String buttonID = "b" + (i + 1);
                 int resID = getResources().getIdentifier(buttonID, "id", getPackageName());
@@ -312,17 +312,17 @@ public class Main3Activity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    void closeAlert(){
+    void closeAlert() {
         AlertDialog.Builder dialog = new AlertDialog.Builder(Main3Activity.this);
         dialog.setCancelable(false);
         dialog.setTitle("TicTac Game");
-        dialog.setMessage("Are you sure you want to Quiz TicTac Game?" );
+        dialog.setMessage("Are you sure you want to Quiz TicTac Game?");
         dialog.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int id) {
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
                     finishAffinity();
-                }else{
+                } else {
                     finish();
                     System.exit(0);
                 }

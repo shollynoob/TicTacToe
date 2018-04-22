@@ -44,12 +44,11 @@ public class Main5Activity extends AppCompatActivity {
         if (mPlayer == 1) {
             pressedButton.setText("X");
             Player1.add(butid);
-            counts++;
             mPlayer = 2;
-            if (counts < 15) {
+            if (counts < 25) {
                 SystemPlay();
             }
-
+            counts++;
         } else {
             pressedButton.setText("O");
             Player2.add(butid);
@@ -108,26 +107,61 @@ public class Main5Activity extends AppCompatActivity {
                 butid = 11;
                 break;
 
-
             case R.id.b12:
                 butid = 12;
                 break;
-
 
             case R.id.b13:
                 butid = 13;
                 break;
 
-
             case R.id.b14:
                 butid = 14;
                 break;
-
 
             case R.id.b15:
                 butid = 15;
                 break;
 
+            case R.id.b16:
+                butid = 16;
+                break;
+
+            case R.id.b17:
+                butid = 17;
+                break;
+
+            case R.id.b18:
+                butid = 18;
+                break;
+
+            case R.id.b19:
+                butid = 19;
+                break;
+
+            case R.id.b20:
+                butid = 20;
+                break;
+
+            case R.id.b21:
+                butid = 21;
+                break;
+
+            case R.id.b22:
+                butid = 22;
+                break;
+
+            case R.id.b23:
+                butid = 23;
+                break;
+
+            case R.id.b24:
+                butid = 24;
+                break;
+
+            case R.id.b25:
+                butid = 25;
+                break;
         }
         play(butid, pressedButton);
     }
@@ -135,112 +169,98 @@ public class Main5Activity extends AppCompatActivity {
     void DecideWinner(int counts) {
         int Winner = -1;
         /// row 1
-        if (Player1.contains(1) && Player1.contains(2) && Player1.contains(3)&& Player1.contains(4)&& Player1.contains(5)) {
+        if (Player1.contains(1) && Player1.contains(2) && Player1.contains(3) && Player1.contains(4) && Player1.contains(5)) {
             Winner = 1;
         }
-        if (Player2.contains(1) && Player2.contains(2) && Player2.contains(3)&& Player2.contains(4)&& Player2.contains(5)) {
+        if (Player2.contains(1) && Player2.contains(2) && Player2.contains(3) && Player2.contains(4) && Player2.contains(5)) {
             Winner = 2;
         }
         ///row  2
-        if (Player1.contains(6) && Player1.contains(7) && Player1.contains(8)&& Player1.contains(9)&& Player1.contains(10)) {
+        if (Player1.contains(6) && Player1.contains(7) && Player1.contains(8) && Player1.contains(9) && Player1.contains(10)) {
             Winner = 1;
         }
-        if (Player2.contains(6) && Player2.contains(7) && Player2.contains(8)&& Player2.contains(9)&& Player2.contains(10)) {
+        if (Player2.contains(6) && Player2.contains(7) && Player2.contains(8) && Player2.contains(9) && Player2.contains(10)) {
             Winner = 2;
         }
         ///row 3
-        if (Player1.contains(11) && Player1.contains(12) && Player1.contains(13)&& Player1.contains(14)&& Player1.contains(15)) {
+        if (Player1.contains(11) && Player1.contains(12) && Player1.contains(13) && Player1.contains(14) && Player1.contains(15)) {
             Winner = 1;
         }
-        if (Player2.contains(11) && Player2.contains(12) && Player2.contains(13)&& Player2.contains(14)&& Player2.contains(15)) {
+        if (Player2.contains(11) && Player2.contains(12) && Player2.contains(13) && Player2.contains(14) && Player2.contains(15)) {
             Winner = 2;
         }
 
+        ///row 4
+        if (Player1.contains(16) && Player1.contains(17) && Player1.contains(18) && Player1.contains(19) && Player1.contains(20)) {
+            Winner = 1;
+        }
+        if (Player2.contains(16) && Player2.contains(17) && Player2.contains(18) && Player2.contains(19) && Player2.contains(20)) {
+            Winner = 2;
+        }
+        ///row 5
+        if (Player1.contains(21) && Player1.contains(22) && Player1.contains(23) && Player1.contains(24) && Player1.contains(25)) {
+            Winner = 1;
+        }
+        if (Player2.contains(21) && Player2.contains(22) && Player2.contains(23) && Player2.contains(24) && Player2.contains(25)) {
+            Winner = 2;
+        }
 
 
         ///column 1
-        if (Player1.contains(1) && Player1.contains(6) && Player1.contains(11)) {
+        if (Player1.contains(1) && Player1.contains(6) && Player1.contains(11) && Player1.contains(16) && Player1.contains(21)) {
             Winner = 1;
         }
-        if (Player2.contains(1) && Player2.contains(6) && Player2.contains(11)) {
+        if (Player2.contains(1) && Player2.contains(6) && Player2.contains(11) && Player2.contains(16) && Player2.contains(21)) {
             Winner = 2;
         }
         ///column2
-        if (Player1.contains(2) && Player1.contains(7) && Player1.contains(12)) {
+        if (Player1.contains(2) && Player1.contains(7) && Player1.contains(12) && Player1.contains(17) && Player1.contains(22)) {
             Winner = 1;
         }
-        if (Player2.contains(2) && Player2.contains(7) && Player2.contains(12)) {
+        if (Player2.contains(2) && Player2.contains(7) && Player2.contains(12) && Player2.contains(17) && Player2.contains(22)) {
             Winner = 2;
         }
         ///column 3
-        if (Player1.contains(3) && Player1.contains(8) && Player1.contains(13)){
+        if (Player1.contains(3) && Player1.contains(8) && Player1.contains(13) && Player1.contains(18) && Player1.contains(23)) {
             Winner = 1;
         }
-        if (Player2.contains(3) && Player2.contains(8) && Player2.contains(13)){
+        if (Player2.contains(3) && Player2.contains(8) && Player2.contains(13) && Player2.contains(18) && Player2.contains(23)) {
             Winner = 2;
         }
         ///column 4
-        if (Player1.contains(4) && Player1.contains(9) && Player1.contains(14)){
+        if (Player1.contains(4) && Player1.contains(9) && Player1.contains(14) && Player1.contains(19) && Player1.contains(24)) {
             Winner = 1;
         }
-        if (Player2.contains(4) && Player2.contains(9) && Player2.contains(14)){
+        if (Player2.contains(4) && Player2.contains(9) && Player2.contains(14) && Player2.contains(19) && Player2.contains(24)) {
             Winner = 2;
         }
         ///column 5
-        if (Player1.contains(5) && Player1.contains(10) && Player1.contains(15)){
+        if (Player1.contains(5) && Player1.contains(10) && Player1.contains(15) && Player1.contains(20) && Player1.contains(25)) {
             Winner = 1;
         }
-        if (Player2.contains(5) && Player2.contains(10) && Player2.contains(15)){
+        if (Player2.contains(5) && Player2.contains(10) && Player2.contains(15) && Player2.contains(20) && Player2.contains(25)) {
             Winner = 2;
         }
-
 
 
         ///diagonal 1a
-        if (Player1.contains(1) && Player1.contains(7) && Player1.contains(13)) {
+        if (Player1.contains(1) && Player1.contains(7) && Player1.contains(13) && Player1.contains(19) && Player1.contains(25)) {
             Winner = 1;
         }
-        if (Player2.contains(1) && Player2.contains(7) && Player2.contains(13)) {
+        if (Player2.contains(1) && Player2.contains(7) && Player2.contains(13) && Player2.contains(19) && Player2.contains(25)) {
             Winner = 2;
         }
-        ///diagonal 1b
-        if (Player1.contains(2) && Player1.contains(8) && Player1.contains(14)) {
-            Winner = 1;
-        }
-        if (Player2.contains(2) && Player2.contains(8) && Player2.contains(14)) {
-            Winner = 2;
-        }
-        ///diagonal 1c
-        if (Player1.contains(3) && Player1.contains(9) && Player1.contains(15)) {
-            Winner = 1;
-        }
-        if (Player2.contains(3) && Player2.contains(9) && Player2.contains(15)) {
-            Winner = 2;
-        }
-
 
 
         ///diagonal 2a
-        if (Player1.contains(5) && Player1.contains(9) && Player1.contains(13)) {
+        if (Player1.contains(5) && Player1.contains(9) && Player1.contains(13) && Player1.contains(17) && Player1.contains(21)) {
             Winner = 1;
         }
-        if (Player2.contains(5) && Player2.contains(9) && Player2.contains(13)) {
+        if (Player2.contains(5) && Player2.contains(9) && Player2.contains(13) && Player2.contains(17) && Player2.contains(21)) {
             Winner = 2;
         }
-        ///diagonal 2b
-        if (Player1.contains(4) && Player1.contains(8) && Player1.contains(12)) {
-            Winner = 1;
-        }
-        if (Player2.contains(4) && Player2.contains(8) && Player2.contains(12)) {
-            Winner = 2;
-        }
-        ///diagonal 2c
-        if (Player1.contains(3) && Player1.contains(7) && Player1.contains(11)) {
-            Winner = 1;
-        }
-        if (Player2.contains(3) && Player2.contains(7) && Player2.contains(11)) {
-            Winner = 2;
-        }
+
+
         if (Winner != -1) {
 
             if (Winner == 1) {
@@ -251,7 +271,7 @@ public class Main5Activity extends AppCompatActivity {
             }
         }
 
-        if (Winner == -1 && counts == 15) {
+        if (Winner == -1 && counts == 25) {
             Toast.makeText(this, "DRAW", Toast.LENGTH_LONG).show();
         }
 
@@ -259,7 +279,7 @@ public class Main5Activity extends AppCompatActivity {
 
     void SystemPlay() {
         ArrayList<Integer> AvailableCells = new ArrayList<Integer>();
-        for (int ButId = 1; ButId < 15; ButId++) {
+        for (int ButId = 1; ButId < 25; ButId++) {
             if (!(Player1.contains(ButId) || Player2.contains(ButId))) {
                 AvailableCells.add(ButId);
             }
@@ -315,6 +335,36 @@ public class Main5Activity extends AppCompatActivity {
             case 15:
                 buselected = (Button) findViewById(R.id.b15);
                 break;
+            case 16:
+                buselected = (Button) findViewById(R.id.b16);
+                break;
+            case 17:
+                buselected = (Button) findViewById(R.id.b17);
+                break;
+            case 18:
+                buselected = (Button) findViewById(R.id.b18);
+                break;
+            case 19:
+                buselected = (Button) findViewById(R.id.b19);
+                break;
+            case 20:
+                buselected = (Button) findViewById(R.id.b20);
+                break;
+            case 21:
+                buselected = (Button) findViewById(R.id.b21);
+                break;
+            case 22:
+                buselected = (Button) findViewById(R.id.b22);
+                break;
+            case 23:
+                buselected = (Button) findViewById(R.id.b23);
+                break;
+            case 24:
+                buselected = (Button) findViewById(R.id.b24);
+                break;
+            case 25:
+                buselected = (Button) findViewById(R.id.b25);
+                break;
         }
         play(CellId, buselected);
 
@@ -347,7 +397,7 @@ public class Main5Activity extends AppCompatActivity {
     }
 
     public void resetBoard(View view) {
-        allButtons = new Button[15];
+        allButtons = new Button[25];
         for (int i = 0; i < allButtons.length; i++) {
             {
                 String buttonID = "b" + (i + 1);
@@ -362,9 +412,9 @@ public class Main5Activity extends AppCompatActivity {
         }
     }
 
-    void disableAllButton(){
-        allButtons = new Button[15];
-        for (int i = 0; i < allButtons.length; i++){
+    void disableAllButton() {
+        allButtons = new Button[25];
+        for (int i = 0; i < allButtons.length; i++) {
             {
                 String buttonID = "b" + (i + 1);
                 int resID = getResources().getIdentifier(buttonID, "id", getPackageName());
@@ -381,6 +431,7 @@ public class Main5Activity extends AppCompatActivity {
         getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
     }
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
@@ -397,17 +448,18 @@ public class Main5Activity extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
     }
-    void closeAlert(){
+
+    void closeAlert() {
         AlertDialog.Builder dialog = new AlertDialog.Builder(Main5Activity.this);
         dialog.setCancelable(false);
         dialog.setTitle("TicTac Game");
-        dialog.setMessage("Are you sure you want to Quiz TicTac Game?" );
+        dialog.setMessage("Are you sure you want to Quiz TicTac Game?");
         dialog.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int id) {
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
                     finishAffinity();
-                }else{
+                } else {
                     finish();
                     System.exit(0);
                 }
